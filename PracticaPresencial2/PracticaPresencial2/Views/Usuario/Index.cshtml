@@ -1,0 +1,27 @@
+﻿@model PracticaPresencial2.Models.Usuario
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@Html.BeginForm("Index", "Usuario", FormMethod.Post);
+
+<br />
+@Html.LabelFor(m => m.Nombre)
+@Html.TextBoxFor(m => m.Nombre)
+@Html.ValidationMessageFor(m => m.Nombre)
+<br />
+
+@Html.LabelFor(m => m.Edad)
+@Html.TextBoxFor(m => m.Edad)
+@Html.ValidationMessageFor(m => m.Edad)
+<br />
+@Html.LabelFor(m => m.Sexo)
+@Html.TextBoxFor(m => m.Sexo)
+@Html.ValidationMessageFor(m => m.Sexo)
+<br />
+@Html.LabelFor(m => m.TipoDeEstudio)
+@Html.TextBoxFor(m => m.TipoDeEstudio)
+@Html.ValidationMessageFor(m => m.TipoDeEstudio)
+
+<input type="submit" />
